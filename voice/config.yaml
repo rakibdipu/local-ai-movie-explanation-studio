@@ -1,0 +1,59 @@
+# Voice & TTS Provider Configuration
+
+providers:
+  edge-tts:
+    en:
+      male: "en-US-ChristopherNeural"
+      female: "en-US-JennyNeural"
+      default: "en-US-ChristopherNeural"
+      styles:
+        cinematic_storytelling: "en-US-ChristopherNeural"
+        fast_paced_youtube: "en-US-GuyNeural"
+        serious_documentary: "en-US-EricNeural"
+        mystery_detective: "en-GB-RyanNeural"
+        casual_storyteller: "en-US-GuyNeural"
+    bn:
+      male: "bn-BD-PradeepNeural"
+      female: "bn-BD-NabanitaNeural"
+      default: "bn-BD-PradeepNeural"
+      styles:
+        cinematic_storytelling: "bn-BD-PradeepNeural"
+        fast_paced_youtube: "bn-IN-BashkarNeural"
+        serious_documentary: "bn-BD-PradeepNeural"
+        mystery_detective: "bn-BD-PradeepNeural"
+        casual_storyteller: "bn-BD-NabanitaNeural"
+    hi:
+      male: "hi-IN-MadhurNeural"
+      female: "hi-IN-SwaraNeural"
+      default: "hi-IN-MadhurNeural"
+      styles:
+        cinematic_storytelling: "hi-IN-MadhurNeural"
+        fast_paced_youtube: "hi-IN-MadhurNeural"
+        serious_documentary: "hi-IN-MadhurNeural"
+        mystery_detective: "hi-IN-MadhurNeural"
+        casual_storyteller: "hi-IN-SwaraNeural"
+
+  kokoro:
+    en:
+      default: "af_bella"
+      male: "am_adam"
+      female: "af_sarah"
+      styles:
+        cinematic_storytelling: "am_adam"
+        fast_paced_youtube: "am_michael"
+        serious_documentary: "am_adam"
+        mystery_detective: "bm_george"
+        casual_storyteller: "af_bella"
+
+  piper:
+    en:
+      model: "en_US-lessac-medium"
+    bn:
+      model: "bn_BD-default-medium"
+    hi:
+      model: "hi_IN-default-medium"
+
+  system:
+    en: "default"
+    bn: "default"
+    hi: "default"

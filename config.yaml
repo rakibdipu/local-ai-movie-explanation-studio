@@ -1,0 +1,80 @@
+# Local AI Movie Explanation Studio - Configuration
+
+project:
+  input_dir: "./input"
+  output_dir: "/home/dipu/Videos/movie expline/explined  movie"
+  projects_dir: "./projects"
+  temp_dir: "./temp"
+
+video:
+  default_resolution: "1280x720" # Options: 1280x720, 1920x1080
+  aspect_ratio: "16:9"           # Options: 16:9, 9:16, 1:1
+  fps: 30
+  video_codec: "libx264"
+  audio_codec: "aac"
+  preset: "faster"               # Low CPU memory & good speed: ultrafast, superfast, veryfast, faster, medium
+  crf: 22
+  visual_mode: "still_motion"    # Options: still_motion (copyright-free Ken Burns stills), video (raw video cuts)
+
+
+story:
+  default_duration_minutes: 20   # Options: 10, 15, 20, 25, 30
+  words_per_minute:
+    en: 145
+    bn: 135
+    hi: 140
+  chunk_duration_seconds: 300    # 5 minutes per chunk
+  chunk_overlap_seconds: 35      # 35 seconds overlap for story continuity
+
+narration:
+  default_language: "en"         # Options: en (English), bn (Bangla), hi (Hindi)
+  default_style: "cinematic_storytelling" # Options: cinematic_storytelling, fast_paced_youtube, serious_documentary, mystery_detective, casual_storyteller
+  speed: 1.0                     # Speaking speed multiplier (0.95 - 1.10)
+  pitch: -8
+
+stt:
+  engine: "faster-whisper"       # Options: faster-whisper, whisper
+  model: "base"                  # CPU-friendly options: tiny, base, small
+  device: "cpu"
+  compute_type: "int8"
+  threads: 2
+
+tts:
+  preferred_engine: "edge-tts"   # Options: edge-tts, kokoro, piper, system
+  fallback_engine: "system"
+  save_format: "wav"
+
+ai:
+  provider: "auto"               # Options: auto, local_heuristic, openai, gemini, anthropic, ollama, groq, deepseek
+  model: "default"
+  api_key_env: "AI_API_KEY"      # Environment variable name for cloud LLM if available
+  temperature: 0.7
+
+processing:
+  cpu_only: true
+  max_workers: 4
+  min_disk_free_gb: 5.0
+  low_memory_mode: true
+  cleanup_temp: true
+
+thumbnail:
+  enabled: true
+  width: 1280
+  height: 720
+  font_size_title: 54
+  font_size_badge: 28
+
+subtitles:
+  enabled: true
+  font_name: "Noto Sans"
+  font_size: 22
+  primary_color: "&H00FFFFFF"    # White
+  outline_color: "&H00000000"    # Black
+  back_color: "&H80000000"       # Semi-transparent black box
+  alignment: 2                   # Bottom center
+
+audio:
+  movie_dialogue_volume: 0.0     # Default 0.0 (OFF). If enabled: 0.05 - 0.20
+  background_music_enabled: false
+  background_music_volume: 0.10
+  ducking_attenuation_db: -18

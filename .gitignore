@@ -1,0 +1,37 @@
+# Python virtual environment & cache
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Video & Audio files (Exclude all media from git)
+*.mp4
+*.mkv
+*.avi
+*.mov
+*.webm
+*.flv
+*.mp3
+*.wav
+*.aac
+*.m4a
+*.ogg
+*.flac
+
+# Movie Explanation Data & Output directories
+input/
+output/
+temp/
+explined  movie/
+projects/
+scratch/
+
+# OS and IDE specific
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
